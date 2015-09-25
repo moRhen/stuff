@@ -15,27 +15,27 @@ aa = [[' ', ' ', ' ', ' '], [' ', ' ', ' ', ' '], [' ', ' ', ' ', ' '], [' ', ' 
 numbers = {'1':a1, '2':a2, '3':a3, '4':a4, '5':a5, '6':a6, '7':a7, '8':a8, '9':a9, '0':a0}
 
 def time_in_num():
-	what_time = time.strftime('%H%M%S')
-	hour0 = numbers[what_time[0]]
-	hour1 = numbers[what_time[1]]
-	minute0 = numbers[what_time[2]]
-	minute1 = numbers[what_time[3]]
-	second0 = numbers[what_time[4]]
-	second1 = numbers[what_time[5]]
+    what_time = time.strftime('%H%M%S')
+    hour0 = numbers[what_time[0]]
+    hour1 = numbers[what_time[1]]
+    minute0 = numbers[what_time[2]]
+    minute1 = numbers[what_time[3]]
+    second0 = numbers[what_time[4]]
+    second1 = numbers[what_time[5]]
 
-	printing_time_table = []
-	n = 0
-	while n < 6:
-		printing_time_table.append(hour0[n] + hour1[n] + aa[n] + minute0[n] + minute1[n] + aa[n] + second0[n] + second1[n])
-		n+=1
-	return printing_time_table
+    printing_time_table = []
+    n = 0
+    while n < 6:
+        printing_time_table.append(hour0[n] + hour1[n] + aa[n] + minute0[n] + minute1[n] + aa[n] + second0[n] + second1[n])
+        n+=1
+    return printing_time_table
 
 
 def print_clock():
-	while True:
-		print('\n' * 100)
-		time_table = time_in_num()
-		for rows in time_table:
-			print(' '.join(rows))
-		time.sleep(1)
+    while True:
+        print('\n' * 100)
+        time_table = time_in_num()
+        for rows in time_table:
+            print(' '.join(rows))
+        time.sleep(1)
 print_clock()
